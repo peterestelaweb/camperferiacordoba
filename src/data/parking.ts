@@ -1,0 +1,125 @@
+// IMPORTANTE: Los datos de pernocta están marcados con su nivel de verificación.
+// No se afirma que se pueda pernoctar en ningún sitio sin verificación oficial.
+// Pendiente confirmar disponibilidad y normativa local durante la Feria 2026.
+
+export const CAMPER_PARKINGS = [
+  {
+    id: 1,
+    name: "Parking de El Arenal (junto al Recinto Ferial)",
+    location: "Paseo de la Victoria / Av. del Aeropuerto, Córdoba",
+    coords: [37.886, -4.791] as [number, number],
+    distanceToAreanal: "0-5 min caminando",
+    timeWalking: "2-5 minutos",
+    googleMaps: "https://maps.google.com/maps?q=37.886,-4.791",
+    type: "aparcamiento-publico",
+    pernocta: "pendiente-confirmar",
+    pros: [
+      "Prácticamente en la puerta del recinto ferial",
+      "Zona muy conocida para aparcamiento de feria",
+      "Fácil acceso con vehículo grande",
+    ],
+    cons: [
+      "Durante la feria puede haber restricciones de acceso",
+      "Posiblemente muy concurrido",
+    ],
+    transport: "A pie hasta El Arenal",
+    safety: "Zona con mucha presencia de gente durante la feria",
+    source: "Información general. Confirmar con Ayuntamiento de Córdoba o en el recinto ferial.",
+    note: "⚠️ Pendiente confirmar si se permite pernocta durante la Feria 2026. Consultar en el Ayuntamiento de Córdoba.",
+    verified: false,
+  },
+  {
+    id: 2,
+    name: "Área de Autocaravanas de Córdoba (Av. Almogávares)",
+    location: "Avenida de los Almogávares, Córdoba",
+    coords: [37.877, -4.808] as [number, number],
+    distanceToAreanal: "~2 km (25-30 min a pie / 10 min en bus)",
+    timeWalking: "25-30 minutos",
+    googleMaps: "https://maps.google.com/maps?q=37.877,-4.808",
+    type: "area-autocaravanas",
+    pernocta: "pendiente-confirmar",
+    pros: [
+      "Área específica para autocaravanas",
+      "Posibilidad de agua y vaciado (verificar)",
+      "Zona tranquila fuera del centro",
+    ],
+    cons: [
+      "A 2km del recinto ferial",
+      "Necesita transporte público o taxi para la noche",
+    ],
+    transport: "Bus urbano Aucorsa líneas hacia centro / Taxi ~10min",
+    safety: "Zona habitualmente tranquila",
+    source: "Información general de áreas de autocaravanas en Córdoba. Verificar en paradores.es o wikiloc.",
+    note: "⚠️ Pendiente confirmar estado y disponibilidad durante Feria 2026. Consultar en app Park4Night o CamperContact.",
+    verified: false,
+  },
+  {
+    id: 3,
+    name: "Parking Ribera del Guadalquivir",
+    location: "Paseo de la Ribera, junto al río Guadalquivir",
+    coords: [37.877, -4.779] as [number, number],
+    distanceToAreanal: "~1.5 km (18-20 min a pie)",
+    timeWalking: "18-20 minutos",
+    googleMaps: "https://maps.google.com/maps?q=37.877,-4.779",
+    type: "aparcamiento-publico",
+    pernocta: "no-pernocta",
+    pros: [
+      "Junto al río y al Puente Romano",
+      "Zona conocida por camperistas",
+      "Buenas vistas y ambiente agradable",
+    ],
+    cons: [
+      "Solo aparcamiento, no área habilitada para pernocta",
+      "Vigilancia variable",
+    ],
+    transport: "A pie 18-20 minutos hasta El Arenal / Bus Aucorsa",
+    safety: "Zona frecuentada por turistas y visitantes",
+    source: "Referencia de foros de autocaravanismo. No confirma pernocta oficial.",
+    note: "⚠️ No es área habilitada para pernocta. Usar solo para aparcamiento diurno.",
+    verified: false,
+  },
+  {
+    id: 4,
+    name: "Camping Municipal Ciudad de Córdoba",
+    location: "Avenida del Brillante, Córdoba",
+    coords: [37.9063, -4.7843] as [number, number],
+    distanceToAreanal: "~4 km (acceso en bus o taxi)",
+    timeWalking: "55-60 min (no recomendable a pie)",
+    googleMaps: "https://maps.google.com/maps?q=37.9063,-4.7843",
+    type: "camping",
+    pernocta: "confirmado-camping",
+    pros: [
+      "Pernocta confirmada en camping oficial",
+      "Servicios completos: agua, luz, duchas, vaciado",
+      "Ambiente de camperistas",
+      "Recepción y seguridad",
+    ],
+    cons: [
+      "A 4km del recinto ferial",
+      "Necesita transporte para ir a la feria",
+      "Puede estar lleno en fechas de feria — reservar con antelación",
+    ],
+    transport: "Bus Aucorsa desde Av. Brillante / Taxi ~15min",
+    safety: "Camping oficial con vigilancia",
+    source: "Camping oficial de Córdoba. Consultar disponibilidad en su web.",
+    note: "✅ Opción más segura y verificada para pernocta. Reservar con antelación para fechas de Feria.",
+    phone: "Consultar en web del Ayuntamiento de Córdoba",
+    verified: true,
+  },
+];
+
+export const TRANSPORT_INFO = {
+  aucorsa: {
+    name: "Aucorsa — Autobuses Urbanos de Córdoba",
+    web: "https://www.aucorsa.es",
+    note: "Durante la Feria se habilitan líneas y horarios especiales nocturnos. Consultar en aucorsa.es antes del viaje.",
+  },
+  feriaShuttles: "Pendiente de confirmar programa de lanzaderas especiales de Feria 2026 en aucorsa.es",
+  taxi: {
+    note: "Taxis disponibles en Córdoba. Desde zonas de parking hasta El Arenal: ~8-15 min, ~8-12€.",
+    apps: ["MyTaxi", "Cabify"],
+  },
+  walking: {
+    note: "El recinto de El Arenal está muy bien comunicado a pie desde el casco histórico y zonas de aparcamiento centrales.",
+  },
+};
