@@ -68,14 +68,23 @@ export default function CamperParking() {
                 <div className="p-5 flex-1 flex flex-col gap-4">
 
                   {/* Distancia */}
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="bg-[#fdf8f0] rounded-xl p-3 text-center">
-                      <div className="text-xs text-[#9b7b6b] mb-0.5">Al Arenal</div>
-                      <div className="font-bold text-sm text-[#2c1810]">{p.distanceToAreanal}</div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs text-[#9b7b6b]">🚶 Distancia al Arenal</span>
+                      <span className="font-bold text-sm text-[#2c1810]">{p.walkingDescription}</span>
                     </div>
-                    <div className="bg-[#fdf8f0] rounded-xl p-3 text-center">
-                      <div className="text-xs text-[#9b7b6b] mb-0.5">Caminando</div>
-                      <div className="font-bold text-sm text-[#2c1810]">{p.timeWalking}</div>
+                    <div className="w-full bg-[#f5e6c8] rounded-full h-2">
+                      <div
+                        className="h-2 rounded-full transition-all"
+                        style={{
+                          width: `${Math.min(p.distanceBar, 100)}%`,
+                          backgroundColor: p.distanceBar <= 5 ? "#16a34a" : p.distanceBar <= 20 ? "#d97706" : "#dc2626",
+                        }}
+                      />
+                    </div>
+                    <div className="flex justify-between text-[10px] text-[#c0c0c0] mt-0.5">
+                      <span>0 m</span>
+                      <span>{p.distanceMeters >= 1000 ? `${(p.distanceMeters / 1000).toFixed(1)} km` : `${p.distanceMeters} m`}</span>
                     </div>
                   </div>
 
