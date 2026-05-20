@@ -111,3 +111,19 @@ Si vas a realizar modificaciones en este código, debes respetar estrictamente l
 2.  **No añadas backends ni bases de datos:** El proyecto debe mantenerse totalmente autónomo, estático e interactivo en cliente. Todos los datos nuevos deben ser estructurados en TypeScript e incorporados en el directorio `src/data/`.
 3.  **Seguridad en SSR:** Cualquier componente que acceda a APIs del navegador (como `document`, `window`, `localStorage` o `speechSynthesis`) debe realizar validaciones previas de entorno (`typeof window !== 'undefined'`) o ejecutarse estrictamente en hooks como `useEffect` o componentes importados con `dynamic({ ssr: false })`.
 4.  **Actualiza este OpenSpec:** Si agregas o eliminas características estructurales significativas del proyecto, documenta el cambio técnico al final de este archivo de especificaciones.
+
+---
+
+## 📝 6. Historial de Actualizaciones Recientes (Mayo 2026)
+
+### 🚀 Expansión y Optimización de la Guía y Ruta Turística en Córdoba
+*   **Ampliación del Catálogo Monumental (12 Sitios Históricos):** Se expandió el listado en `src/data/places.ts` de 8 a 12 sitios de alto interés turístico para enriquecer la experiencia de viaje de Peter. Los nuevos sitios son:
+    *   *Palacio de Viana* (id: 9) con sus doce icónicos patios andaluces.
+    *   *Plaza de las Tendillas* (id: 10), el centro social moderno y comercial de Córdoba.
+    *   *Templo Romano* (id: 11), testimonio imperial de la Colonia Patricia de Corduba.
+    *   *Caballerizas Reales* (id: 12), cuna histórica del caballo Pura Raza Española (PRE).
+*   **Trazado de Ruta Peatonal Circular Continua:** Se rediseñó la constante `TOUR_ROUTE_COORDS` en `src/components/CordobaMapComponent.tsx` para generar un recorrido circular y fluido sin cruces repetitivos. Conecta de forma secuencial: Calahorra ➔ Puente Romano ➔ Ribera ➔ Caballerizas Reales ➔ Alcázar ➔ Judería ➔ Mezquita ➔ Calleja de las Flores ➔ Tendillas ➔ Templo Romano ➔ Palacio de Viana ➔ Plaza de la Corredera.
+*   **Resolución de CORS con Imágenes Locales Fidedignas (Carga Offline y PDF Estable):** Para corregir por completo los fallos de carga debidos a las políticas CORS y restricciones de hotlinking de servidores externos (como Wikipedia), se generaron 12 imágenes fidedignas de alta fidelidad, almacenadas localmente en `/public/images/places/` (`mezquita.png`, `puente_romano.png`, etc.). Esto garantiza carga inmediata, elimina enlaces rotos y permite una exportación a PDF local 100% fiable y estable en todo momento.
+*   **Verificación del Calendario de la Feria:** Se confirmó e integró la programación del fin de semana (23 al 25 de mayo de 2026) en `src/data/feria.ts`, con la agenda musical de casetas emblemáticas en El Arenal como Las Rodes, la Banda Imposible, el Grupo Conexión y la tradicional Copla Gala.
+*   **Empaquetado y Despliegue Automatizado:** Se ejecutó con éxito la compilación estática (`npm run build`) para generar los archivos de producción en `/out/` libres de cualquier error de linter o compilador Next.js/TypeScript. Se crearon los archivos empaquetados comprimidos `camper-feria-cordoba-2026-servidor.zip` en la raíz del proyecto y el espacio de trabajo, listos para su carga manual en servidores clásicos de Peter. Los cambios fueron empujados de manera segura a la rama principal `main` en GitHub.
+
