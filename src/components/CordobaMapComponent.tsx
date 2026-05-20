@@ -58,17 +58,22 @@ const categoryIcons: Record<string, L.Icon> = {
   naturaleza: blueIcon,
 };
 
-// Ruta a pie optimizada por Córdoba conectando los monumentos de forma lógica
+// Ruta a pie optimizada por Córdoba conectando los 12 monumentos de forma circular y lógica
 const TOUR_ROUTE_COORDS: [number, number][] = [
-  [37.8773, -4.7814], // 1. Alcázar
-  [37.8782, -4.7818], // 2. Judería
-  [37.8791, -4.7794], // 3. Mezquita-Catedral
-  [37.8795, -4.7800], // 4. Calleja de las Flores
-  [37.8798, -4.7757], // 5. Plaza de la Corredera
-  [37.878, -4.782],   // 6. Ribera del Guadalquivir
-  [37.8768, -4.7791], // 7. Puente Romano
-  [37.8755, -4.7788], // 8. Torre de la Calahorra
+  [37.8755, -4.7788], // 1. Torre de la Calahorra
+  [37.8768, -4.7791], // 2. Puente Romano
+  [37.878, -4.782],   // 3. Ribera del Guadalquivir
+  [37.8778, -4.7828], // 4. Caballerizas Reales
+  [37.8773, -4.7814], // 5. Alcázar de los Reyes Cristianos
+  [37.8782, -4.7818], // 6. Barrio de la Judería
+  [37.8791, -4.7794], // 7. Mezquita-Catedral
+  [37.8795, -4.7800], // 8. Calleja de las Flores
+  [37.8847, -4.7794], // 9. Plaza de las Tendillas
+  [37.8858, -4.7774], // 10. Templo Romano
+  [37.8883, -4.7745], // 11. Palacio de Viana
+  [37.8798, -4.7757], // 12. Plaza de la Corredera
 ];
+
 
 export default function CordobaMapComponent() {
   const center: [number, number] = [37.8782, -4.7794]; // Centro en el casco histórico de Córdoba
